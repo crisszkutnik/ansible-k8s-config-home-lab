@@ -2,7 +2,7 @@
   register: k3s_service
   template:
     src: "k3s.service.j2"
-    dest: "{{ systemd_dir }}/k3s.service"
+    dest: "/etc/systemd/system/k3s.service"
     owner: orangepi
     mode: 0644
 

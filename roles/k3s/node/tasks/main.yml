@@ -1,9 +1,8 @@
 - name: Copy K3s service file
   template:
     src: "k3s.service.j2"
-    dest: "{{ systemd_dir }}/k3s-node.service"
-    owner: root
-    group: root
+    dest: "/etc/systemd/system/k3s.service"
+    owner: orangepi
     mode: 0755
 
 - name: Create hostname value
@@ -21,7 +20,7 @@
 
 - name: Enable and check K3s service
   systemd:
-    name: k3s-node
+    name: k3s
     daemon_reload: yes
     state: restarted
     enabled: yes
