@@ -10,6 +10,14 @@ It contains three Ansible playbooks that perform various tasks
 
 First of all you have to create a SSH keypair and set it up in each of the hosts. You will have to add the public key of the keypair to the `authorized_keys` file of each host
 
+## How to run
+
+It is very easy. Just have Ansible installed and run
+
+```bash
+ansible-playbook <playbook_name>
+```
+
 # Playbooks
 
 ## update_sources
